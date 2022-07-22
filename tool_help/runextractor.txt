@@ -1,0 +1,10 @@
+Usage: runextractor <flags> <subcommand> <subcommand args>
+
+Subcommands for cc:
+	cmake            extract a repo build with CMake
+	compdb           extract a repo from compile_commands.json
+
+Subcommands for java:
+	gradle           extract a repo built with gradle
+	maven            extract a repo built with maven
+

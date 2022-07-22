@@ -1,0 +1,22 @@
+Usage: read_entries --graphstore spec [--count] [--shards N [--shard_index I] --sharded_file path] [--edge_kind] ([--fact_prefix str] [--target ticket] | [ticket...])
+Scans/reads the entries from a GraphStore, emitting a delimited entry stream to stdout
+
+Version: v0.0.59 [Clean d72961d7d08938131cca04dce7c0951bc03c7fd4]
+
+Flags:
+  -count
+    	Only print the number of entries scanned
+  -edge_kind string
+    	Edge kind by which to filter a read/scan
+  -fact_prefix string
+    	Fact prefix by which to filter a scan
+  -graphstore value
+    	GraphStore to read (default <nil>)
+  -shard_index int
+    	Index of a single shard to emit (requires --shards)
+  -sharded_file string
+    	If given, scan the entire GraphStore, storing each shard in a separate file instead of stdout (requires --shards)
+  -shards int
+    	Number of shards to split the GraphStore
+  -target string
+    	Ticket of target by which to filter a scan

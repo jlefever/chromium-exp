@@ -1,0 +1,4 @@
+Usage: kythe <flags> <subcommand> <subcommand args>
+
+
+Use "kythe flags" for a list of top-level flags

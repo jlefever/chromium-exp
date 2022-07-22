@@ -1,0 +1,28 @@
+Usage: entrystream [--read_format=<format>] [--unique] ([--write_format=<format>] [--sort] | [--entrysets] | [--count] | [--aggregate_entryset])
+Manipulate a stream of Entry messages
+
+Version: v0.0.59 [Clean d72961d7d08938131cca04dce7c0951bc03c7fd4]
+
+Flags:
+  -aggregate_entryset
+    	Output a single aggregate EntrySet proto
+  -count
+    	Only print the count of protos streamed
+  -entrysets
+    	Print Entry protos as JSON EntrySets (implies --sort and --write_format=json)
+  -read_format string
+    	Format of the input stream (accepted formats: {delimited,json,riegeli}) (default "delimited")
+  -read_json
+    	Assume stdin is a stream of JSON entries instead of protobufs (deprecated: use --read_format)
+  -riegeli_writer_options string
+    	Riegeli writer options
+  -sort
+    	Sort entry stream into GraphStore order
+  -structured_facts
+    	Encode and/or decode the fact_value for marked source facts
+  -unique
+    	Print only unique entries (implies --sort)
+  -write_format string
+    	Format of the output stream (accepted formats: {delimited,json,riegeli}) (default "delimited")
+  -write_json
+    	Print JSON stream as output (deprecated: use --write_format)

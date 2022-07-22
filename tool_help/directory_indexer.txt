@@ -1,0 +1,14 @@
+Usage: directory_indexer [--verbose] [--emit_irregular] [--vnames path] [--exclude re0,re1,...,reN] [directories]
+Produce a stream of entries representing the files in the given directories
+
+Version: v0.0.59 [Clean d72961d7d08938131cca04dce7c0951bc03c7fd4]
+
+Flags:
+  -emit_irregular
+    	Emit nodes for irregular files
+  -exclude string
+    	Comma-separated list of exclude regexp patterns
+  -verbose
+    	Print verbose logging
+  -vnames string
+    	Path to JSON VNames configuration

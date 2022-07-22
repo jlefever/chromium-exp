@@ -1,0 +1,10 @@
+Usage: kzip <flags> <subcommand> <subcommand args>
+
+Subcommands:
+	create           create simple kzip archives
+	create_metadata  create a metadata kzip file, which records extra repository information
+	filter           filter units from kzip file
+	info             info on single kzip archive
+	merge            merge kzip files
+	view             view compilation units stored in .kzip files
+

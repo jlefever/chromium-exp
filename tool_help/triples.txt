@@ -1,0 +1,12 @@
+Usage: triples [(--graphstore path | entries_file) [triples_out]]
+Converts an Entry stream to a stream of triples
+
+Version: v0.0.59 [Clean d72961d7d08938131cca04dce7c0951bc03c7fd4]
+
+Flags:
+  -graphstore value
+    	Path to GraphStore to convert to triples (instead of an entry stream) (default <nil>)
+  -keep_reverse_edges
+    	Do not filter reverse edges from triples output
+  -quiet
+    	Do not emit logging messages

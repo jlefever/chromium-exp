@@ -1,0 +1,32 @@
+verifier: Verification tool for Kythe databases.
+Reads Kythe facts from standard input and checks them against one or more rule
+files. See https://kythe.io/docs/kythe-verifier.html for more details on
+invocation and rule syntax.
+
+Example:
+  ${INDEXER_BIN} -i $1 | ${VERIFIER_BIN} --show_protos --show_goals $1
+  cat foo.entries | ${VERIFIER_BIN} goals1.cc goals2.cc
+  cat foo.entries | ${VERIFIER_BIN} --use_file_nodes
+
+
+  Flags from kythe/cxx/verifier/verifier_main.cc:
+    --annotated_graphviz (Solve and annotate a GraphViz graph.); default: false;
+    --check_for_singletons (Fail on singleton variables.); default: true;
+    --convert_marked_source (Convert MarkedSource-valued facts to subgraphs.);
+      default: false;
+    --file_vnames (Find file vnames by matching file content.); default: true;
+    --goal_prefix (Denote goals with this string.); default: "//-";
+    --goal_regex (If nonempty, denote goals with this regex. The regex must
+      match the entire line. Expects one capture group.); default: "";
+    --graphviz (Only dump facts as a GraphViz-compatible graph); default: false;
+    --ignore_dups (Ignore duplicate facts during verification); default: false;
+    --show_anchors (Show anchor locations instead of @s); default: false;
+    --show_goals (Show goals after parsing); default: false;
+    --show_protos (Show protocol buffers read from standard in); default: false;
+    --use_fast_solver (Use the fast solver. EXPERIMENTAL; NOT ALL FEATURES ARE
+      CURRENTLY SUPPORTED.); default: false;
+    --use_file_nodes (Look for assertions in UTF8 file nodes.); default: false;
+
+Try --helpfull to get a list of all flags or --help=substring shows help for
+flags which include specified substring in either in the name, or description or
+path.

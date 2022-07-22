@@ -1,0 +1,14 @@
+Usage: write_entries [--batch_size entries] [--workers n] --graphstore spec
+Write a delimited stream of entries from stdin to a GraphStore
+
+Version: v0.0.59 [Clean d72961d7d08938131cca04dce7c0951bc03c7fd4]
+
+Flags:
+  -batch_size int
+    	Maximum entries per write for consecutive entries with the same source (default 1024)
+  -cpu_profile string
+    	Write CPU profile to the specified file (if nonempty)
+  -graphstore value
+    	GraphStore to which to write the entry stream (default <nil>)
+  -workers int
+    	Number of concurrent workers writing to the GraphStore (default 1)

@@ -1,0 +1,8 @@
+Usage: dedup_stream 
+Remove duplicate records from a delimited stream
+
+Version: v0.0.59 [Clean d72961d7d08938131cca04dce7c0951bc03c7fd4]
+
+Flags:
+  -cache_size value
+    	Maximum size of the cache of known record hashes (e.g. "10B", "12KB", "3GiB", etc.) (default 3GiB)

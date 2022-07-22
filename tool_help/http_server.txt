@@ -1,0 +1,28 @@
+Usage: http_server (--graphstore spec | --serving_table path) [--listen addr] [--public_resources dir]
+Exposes HTTP interfaces for the xrefs and filetree services
+
+Version: v0.0.59 [Clean d72961d7d08938131cca04dce7c0951bc03c7fd4]
+
+Flags:
+  -experimental_cross_reference_indirection_kinds value
+    	Comma-separated set of key-value pairs (node_kind=edge_kind) to indirect through in CrossReferences.  For example, "talias=/kythe/edge/aliases" indicates that the targets of a 'talias' node's '/kythe/edge/aliases' related nodes will have their cross-references merged into the root 'talias' node's.  A "*=edge_kind" entry indicates to indirect through the specified edge kind for any node kind.
+  -experimental_default_totals_quality string
+    	Default TotalsQuality when unspecified in CrossReferencesRequest (default "APPROXIMATE_TOTALS")
+  -http_allow_origin string
+    	If set, each HTTP response will contain a Access-Control-Allow-Origin header with the given value
+  -listen string
+    	Listening address for HTTP server (":<port>" allows access from any machine) (default "localhost:8080")
+  -max_tickets_per_request int
+    	Maximum number of tickets allowed per request (default 20)
+  -merge_cross_references
+    	Whether to merge nodes when responding to a CrossReferencesRequest (default true)
+  -public_resources string
+    	Path to directory of static resources to serve
+  -serving_table string
+    	LevelDB serving table
+  -tls_cert_file string
+    	Path to file with concatenation of TLS certificates
+  -tls_key_file string
+    	Path to file with TLS private key
+  -tls_listen string
+    	Listening address for TLS HTTP server
