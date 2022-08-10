@@ -7,3 +7,6 @@
 cat entries | /opt/kythe/tools/entrystream --sort --write_format=json > entries.jsonl
 cat entries.jsonl | gzip > entries.jsonl.gz
 ```
+
+
+CHROME VERSION: b6f4fcc126e5e7ae9845db6387a0b52f3b79cc16
